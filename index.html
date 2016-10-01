@@ -1,0 +1,29 @@
+<html>
+<title>
+    Index Page
+</title>
+<head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/theme.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="true">
+</head>
+<body>
+    <div id="centered-goodies">
+        <center>
+            <div class="well">
+                <h3>Attended Events</h3>
+                <hr>
+                <p ng-repeat='checkin in checkins'>
+                    <a href="#" class="btn btn-info">{{checkin.EventID}}</a><br><br>
+                </p>
+            </div>
+        </center>
+    </div>
+    <div class="btn-group" id="footer">
+        <center>
+            <a href="/#/previous" class="btn btn-default">Back</a>
+            <a href="/#/userpanel" class="btn btn-default">User Panel</a>
+        </center>
+    </div>
+</body>
+</html>

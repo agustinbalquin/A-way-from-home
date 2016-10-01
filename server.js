@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 var port     = process.env.PORT || 8080; // set our port
 
 var mongoose   = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/cs'); // connect to our database
+mongoose.connect('mongodb://localhost:27017/cs/customers'); // connect to our database
 var Customer     = require('./app/models/customer');
 
 // ROUTES FOR OUR API
@@ -65,6 +65,39 @@ router.route('/customers')
 			res.json(customers);
 		});
 	});
+
+
+
+//
+//
+router.route('/customer')
+
+	// create a customer (accessed at POST http://localhost:8080/customers)
+	.put(function(req, res) {
+		
+		Customer.updateOne({name: req.params.name}, 
+		{
+	        $set: {"authorized": "true"},
+	        $currentDate: { "lastModified": true }
+      	},function(err, customers) {
+			if (err)
+				res.send(err);
+
+			res.json(customers);
+		});
+		
+	})
+
+	
+	.get(function(req, res) {
+		Customer.findOne({authorized: "false"}, function(err, customers) {
+			if (err)
+				res.send(err);
+
+			res.json(customers);
+		});
+	});
+
 
 // on routes that end in /customers/:customer_id
 // ----------------------------------------------------
