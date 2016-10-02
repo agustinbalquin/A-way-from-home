@@ -16,8 +16,8 @@ var docusign = require('docusign-esign'),
 var integratorKey = process.env.DOCUSIGN_INTEGRATOR_KEY || '3b90f771-e1d8-451d-8b08-14c141927249', // Integrator Key associated with your DocuSign Integration
   email = process.env.DOCUSIGN_LOGIN_EMAIL || 'abalq001@ucr.edu',        // Email for your DocuSign Account
   password = process.env.DOCUSIGN_LOGIN_PASSWORD || 'auggie123',    // Password for your DocuSign Account
-  recipientName = 'Gustavo Correa',  // Recipient's Full Name
-  recipientEmail = 'gcorr003@ucr.edu', // Recipient's Email
+  recipientName = 'agustinbalquin',  // Recipient's Full Name
+  recipientEmail = 'agustinbalquin@gmail.com', // Recipient's Email
   templateId = "tem1",   // valid templateId from a template in your account
   templateRoleName = "signer1", // template role that exists on above template
   docusignEnv = 'demo', // DocuSign Environment generally demo for testing purposes ('www' == production)

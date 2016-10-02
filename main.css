@@ -1,0 +1,99 @@
+/*Background Animatons Begin*/
+body {
+    background: linear-gradient(226deg, #c6d7c4, #add0cc, #fecd6e, #a48da7, #6b969f);
+    background-size: 1000% 1000%;
+
+    -webkit-animation: AnimationName 8s ease infinite;
+    -moz-animation: AnimationName 8s ease infinite;
+    -o-animation: AnimationName 8s ease infinite;
+    animation: AnimationName 8s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 92%}
+    50%{background-position:100% 9%}
+    100%{background-position:0% 92%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 92%}
+    50%{background-position:100% 9%}
+    100%{background-position:0% 92%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 92%}
+    50%{background-position:100% 9%}
+    100%{background-position:0% 92%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 92%}
+    50%{background-position:100% 9%}
+    100%{background-position:0% 92%}
+}
+/*Input Begin*/
+input {
+    text-align: center;
+    line-height: 5em;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: 10%;
+  padding: 0px 16px;
+  font-size: 2em;
+  line-height: 1.42857143;
+  color: #2b3e50;
+  background-color: #ffffff;
+  background-image: none;
+  border: 5px solid transparent;
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.15);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+/*Logo Stuff*/
+.logo {
+    height: auto;
+    width: auto;
+    max-width: 200px;
+    max-height: 200px;
+    user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+}
+.logo-small {
+    height: auto;
+    width: auto;
+    max-width: 50%;
+    max-height: 50%;
+    user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+}
+.logo-extra-small {
+    height: auto;
+    width: auto;
+    max-width: 10%;
+    max-height: 10%;
+    user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+}
+
+/*Extra Goodies*/
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
