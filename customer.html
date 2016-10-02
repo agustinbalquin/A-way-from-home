@@ -4,7 +4,7 @@
 </title>
 <head>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="HandheldFriendly" content="true">
@@ -12,8 +12,8 @@
 <body>
     <div id="centered">
     	<div id="demo" class= "btn btn-success" onclick="fetchData()"><h2>Get new customer</h2></div>
-    	<div id="field1"></div>
-    	<div id="field2"></div>
+    	<div id="field1" font size = "20"></div>
+    	<div id="field2" font size = "20"></div>
     	<a href="tel:5625063648" class= "btn btn-success" onclick="">Call customer</a>
     </div>
 
@@ -33,6 +33,22 @@
 		                    error: function (response){
 
 		                        console.log("failed");
+		                    }
+		                });
+
+		}
+		$.ajax({
+		                    type: "POST",
+		                    url: "http://10.20.5.12:8080/api/send/:email=agustinbalquin@gmail.com",
+		                    contentType: "application/json; charset=utf-8",
+		                    dataType: "json",                        
+		                    success: function (response) {
+		                        
+							    console.log(response);
+							},
+		                    error: function (response){
+
+		                       
 		                    }
 		                });
 

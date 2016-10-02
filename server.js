@@ -198,7 +198,7 @@ router.route('/customer')
 
 	
 	.get(function(req, res) {
-		Customer.findOne({authorized: "false"}, function(err, customers) {
+		Customer.findOne({"name": "danny"}, function(err, customers) {
 			if (err)
 				res.send(err);
 
