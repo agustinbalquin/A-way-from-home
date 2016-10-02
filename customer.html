@@ -3,11 +3,39 @@
     Customer Page
 </title>
 <head>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/theme.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="HandheldFriendly" content="true">
 </head>
 <body>
-    
+    <div id="centered">
+    	<div id="demo" class= "btn btn-success" onclick="fetchData()"><h2>Get new customer</h2></div>
+    	<div id="field1"></div>
+    	<div id="field2"></div>
+    	<a href="tel:5625063648" class= "btn btn-success">Call customer</a>
+    </div>
+
+    <script type="text/javascript" >
+	    function fetchData(){
+		    $.ajax({
+		                    type: "GET",
+		                    url: "http://10.20.5.12:8080/api/customer",
+		                    contentType: "application/json; charset=utf-8",
+		                    dataType: "json",                        
+		                    success: function (response) {
+		                        document.getElementById('field1').innerHTML = response["name"];
+							    document.getElementById('field2').innerHTML = response["authorized"];
+							    //document.getElementById('A3').innerHTML = this.responseText;
+							    console.log(response);
+							},
+		                    error: function (response){
+
+		                        console.log("failed");
+		                    }
+		                });
+		}	
+    </script>>
 </body>
 </html>
